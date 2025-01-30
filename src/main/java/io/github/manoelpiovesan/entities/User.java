@@ -1,16 +1,12 @@
 package io.github.manoelpiovesan.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.github.manoelpiovesan.utils.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author Manoel Rodrigues
@@ -29,12 +25,6 @@ public class User extends AbstractFullEntity {
     @Column(name = "username", nullable = false)
     public String username;
 
-    @Column(name = "cpf", nullable = false)
-    public String cpf;
-
-    @Column(name = "phone", nullable = false)
-    public String phone;
-
     @Column(name = "email", nullable = false)
     public String email;
 
@@ -43,30 +33,6 @@ public class User extends AbstractFullEntity {
     public String password;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    @Column(name = "role", nullable = false)
-    public String role;
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "user")
-    public List<Project> projects;
-
-    /**
-     * Convert the object to a map
-     *
-     * @return Map<String, Object>
-     */
-    public Map<String, Object> toMap() {
-        return Map.of(
-                "id", id,
-                "firstName", firstName,
-                "lastName", lastName,
-                "username", username,
-                "cpf", cpf,
-                "phone", phone,
-                "email", email,
-                "role", role,
-                "createdAt", createdAt,
-                "updatedAt", updatedAt
-        );
-    }
+    @Column(name = "role")
+    public String role = Role.USER;
 }

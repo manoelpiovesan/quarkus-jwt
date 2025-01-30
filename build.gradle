@@ -9,6 +9,7 @@ repositories {
 }
 
 dependencies {
+    implementation "org.mindrot:jbcrypt:0.4"
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-hibernate-orm-rest-data-panache'
     implementation 'io.quarkus:quarkus-smallrye-openapi'
