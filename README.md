@@ -40,7 +40,7 @@ mkdir -p META-INF/resources && mv publicKey.pem META-INF/resources
 
 ```properties
 mp.jwt.verify.publickey.location=META-INF/resources/publicKey.pem
-mp.jwt.verify.issuer=https://quarkus.io/using-jwt-rbac
+mp.jwt.verify.issuer=https://manoelpiovesan.github.io
 quarkus.smallrye-jwt.enabled=true
 ```
 
