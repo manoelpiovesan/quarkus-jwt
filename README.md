@@ -1,4 +1,4 @@
-# Autenticação JWT com Quarkus
+# 🔒 Autenticação JWT com Quarkus
 
 Inspirado em [emersonsiega/quarkus-jwt](https://github.com/emersonsiega/quarkus-jwt)
 
