@@ -4,9 +4,6 @@ Inspirado em [emersonsiega/quarkus-jwt](https://github.com/emersonsiega/quarkus-
 
 ## Criar chave privada e pública
 
-Uma chave privada é necessária para assinar o token JWT e a chave pública é necessária para verificar a assinatura.
-
-
 Navegar até o diretório de recursos
 ```bash
 cd src/main/resources
