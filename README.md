@@ -43,4 +43,13 @@ quarkus.smallrye-jwt.enabled=true
 
 Pronto! Agora você pode acessar a aplicação e obter um token JWT.
 
+## Opcional
+
+Adicionar os arquivos ao seu .gitignore
+```gitignore
+#JWT
+src/main/resources/privateKey.pem
+src/main/resources/baseKey.pem
+```
+
 
